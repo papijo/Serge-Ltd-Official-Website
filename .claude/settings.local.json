@@ -41,7 +41,8 @@
       "Bash(cp \"C:/Users/papijo/Documents/Serge/website-demo/public/serge-wordmark-white.svg\" \"C:/Users/papijo/Documents/Serge/website/public/\")",
       "Bash(cp \"C:/Users/papijo/Documents/Serge/website-demo/public/serge-dots.svg\" \"C:/Users/papijo/Documents/Serge/website/public/\")",
       "Bash(dir \"C:\\\\Users\\\\papijo\\\\Documents\\\\Serge\")",
-      "Bash(npx tsc *)"
+      "Bash(npx tsc *)",
+      "Bash(node *)"
     ]
   }
 }

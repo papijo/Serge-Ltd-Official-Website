@@ -16,7 +16,7 @@ const barlow = Barlow({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://serge.firm"),
+  metadataBase: new URL("https://weareserge.com"),
   title: {
     default: "SERGE | Brilliantly evolve",
     template: "%s | SERGE",
@@ -51,7 +51,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://serge.firm",
+    url: "https://weareserge.com",
     siteName: "SERGE",
     title: "SERGE | Brilliantly evolve",
     description:
@@ -73,7 +73,7 @@ export const metadata: Metadata = {
     images: ["/og-image.jpg"],
   },
   alternates: {
-    canonical: "https://serge.firm",
+    canonical: "https://weareserge.com",
   },
 };
 
@@ -101,7 +101,7 @@ export default function RootLayout({
               name: "SERGE",
               description:
                 "A sovereign advisory practice for executives, boards, and government.",
-              url: "https://serge.firm",
+              url: "https://weareserge.com",
               foundingDate: "2015",
               address: [
                 {
@@ -116,7 +116,7 @@ export default function RootLayout({
               contactPoint: {
                 "@type": "ContactPoint",
                 telephone: "+1-212-000-0000",
-                email: "partners@serge.firm",
+                email: "hello@weareserge.com",
                 contactType: "business",
               },
             }),
@@ -131,7 +131,11 @@ export default function RootLayout({
 
         <Navigation />
 
-        <main id="main-content" className="relative z-[1]" style={{ paddingTop: 76 }}>
+        <main
+          id="main-content"
+          className="relative z-[1]"
+          style={{ paddingTop: 76 }}
+        >
           {children}
         </main>
 

@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   title: "SERGE | Brilliantly evolve",
   description:
     "SERGE is a sovereign advisory practice for executives, boards, and government — guiding institutions through decisions that endure.",
-  alternates: { canonical: "https://serge.firm" },
+  alternates: { canonical: "https://weareserge.com" },
 };
 
 export default function HomePage() {
