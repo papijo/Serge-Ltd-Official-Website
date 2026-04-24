@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:api.anthropic.com)",
+      "Bash(cp /c/Users/papijo/.claude/projects/C--Users-papijo-Documents-Serge-website/19daa257-6f25-4532-b761-f48aba914e50/tool-results/webfetch-1777031392556-2hy1m7.bin /tmp/design.gz)",
+      "Bash(gunzip -f /tmp/design.gz)",
+      "Read(//tmp/**)",
+      "Bash(xxd)",
+      "Bash(mkdir -p /tmp/design_extracted)",
+      "Bash(tar -xf /tmp/design -C /tmp/design_extracted)",
+      "Bash(npx create-next-app@latest *)"
+    ]
+  }
+}
