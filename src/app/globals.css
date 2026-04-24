@@ -1,26 +1,438 @@
 @import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@custom-variant dark (&:is(.dark *));
+
+/* ── Valky custom font ── */
+@font-face {
+  font-family: "Valky";
+  src: url("/fonts/valky/Valky.otf") format("opentype"),
+       url("/fonts/valky/ValkyRegular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
+  --font-sans: var(--font-barlow), "Helvetica Neue", Arial, sans-serif;
+  --font-display: "Valky", "Barlow", "Helvetica Neue", Arial, sans-serif;
   --font-mono: var(--font-geist-mono);
+  --font-heading: var(--font-display);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+
+  /* Serge design tokens */
+  --color-serge-bg: #061c28;
+  --color-serge-bg-deep: #030d15;
+  --color-serge-bg-raised: #0c3245;
+  --color-serge-bg-mid: #0f3c54;
+  --color-serge-ink: #e2ecf0;
+  --color-serge-ink-dim: rgba(226,236,240,0.72);
+  --color-serge-muted: #6b90a0;
+  --color-serge-accent: #ff7b2e;
+  --color-serge-amber: #f9ac43;
+  --color-serge-teal: #2da68a;
+  --color-serge-gold: #c4a358;
+  --color-serge-surface: #0c3245;
+  --color-serge-border: rgba(175,208,222,0.11);
+  --color-serge-border-strong: rgba(175,208,222,0.22);
+  --color-serge-border-amber: rgba(249,172,67,0.3);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+:root {
+  --background: #061c28;
+  --foreground: #e2ecf0;
+  --card: #0c3245;
+  --card-foreground: #e2ecf0;
+  --popover: #061c28;
+  --popover-foreground: #e2ecf0;
+  --primary: #ff7b2e;
+  --primary-foreground: #030d15;
+  --secondary: #0c3245;
+  --secondary-foreground: #e2ecf0;
+  --muted: #0c3245;
+  --muted-foreground: #6b90a0;
+  --accent: #ff7b2e;
+  --accent-foreground: #030d15;
+  --destructive: oklch(0.577 0.245 27.325);
+  --border: rgba(175,208,222,0.11);
+  --input: rgba(175,208,222,0.15);
+  --ring: rgba(249,172,67,0.5);
+  --radius: 0rem;
+  --sidebar: #0c3245;
+  --sidebar-foreground: #e2ecf0;
+  --sidebar-primary: #ff7b2e;
+  --sidebar-primary-foreground: #030d15;
+  --sidebar-accent: #0f3c54;
+  --sidebar-accent-foreground: #e2ecf0;
+  --sidebar-border: rgba(175,208,222,0.11);
+  --sidebar-ring: rgba(249,172,67,0.5);
+
+  /* Serge tokens as CSS vars for use in plain CSS */
+  --serge-bg: #061c28;
+  --serge-bg-deep: #030d15;
+  --serge-bg-raised: #0c3245;
+  --serge-bg-mid: #0f3c54;
+  --serge-ink: #e2ecf0;
+  --serge-ink-dim: rgba(226,236,240,0.72);
+  --serge-muted: #6b90a0;
+  --serge-accent: #ff7b2e;
+  --serge-amber: #f9ac43;
+  --serge-teal: #2da68a;
+  --serge-gold: #c4a358;
+  --serge-surface: #0c3245;
+  --serge-border: rgba(175,208,222,0.11);
+  --serge-border-strong: rgba(175,208,222,0.22);
+  --serge-border-amber: rgba(249,172,67,0.3);
+  --f-display: "Valky", "Barlow", "Helvetica Neue", Arial, sans-serif;
+  --f-sans: "Barlow", "Helvetica Neue", Arial, sans-serif;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+    box-sizing: border-box;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--f-sans);
+    font-weight: 300;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: clip;
+    background: var(--serge-bg);
+    color: var(--serge-ink);
+  }
+  html {
+    overflow-x: clip;
+  }
+  img {
+    display: block;
+    max-width: 100%;
+  }
+  a {
+    color: inherit;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* ── Background atmosphere ── */
+.bg-atmosphere {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse 90% 70% at 60% 100%, rgba(12,55,78,0.7) 0%, transparent 62%),
+    radial-gradient(ellipse 55% 50% at 10% 5%, rgba(45,166,138,0.12) 0%, transparent 55%),
+    linear-gradient(165deg, #0d3e57 0%, #072032 48%, #030d15 100%);
+}
+
+.bg-texture {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.28;
+  background-image:
+    repeating-linear-gradient(
+      -55deg,
+      transparent,
+      transparent 56px,
+      rgba(175,208,222,0.04) 56px,
+      rgba(175,208,222,0.04) 57px
+    );
+}
+
+.gl-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 10;
+  pointer-events: none;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.35) 0%, transparent 18%, transparent 80%, rgba(0,0,0,0.45) 100%);
+}
+
+.viewport-border {
+  position: fixed;
+  inset: 20px;
+  border: 1px solid var(--serge-border);
+  pointer-events: none;
+  z-index: 100;
+}
+
+/* ── Font utilities ── */
+.font-display { font-family: var(--f-display); }
+.font-sans { font-family: var(--f-sans); }
+
+/* ── Scroll animations ── */
+.reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-16px);
+  transition: opacity 0.55s ease, transform 0.55s ease;
+}
+.reveal-left.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* ── Marquee animation ── */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.animate-marquee {
+  animation: marquee 30s linear infinite;
+  will-change: transform;
+}
+
+/* ── Hero logo watermark ── */
+.hero-logo-watermark svg {
+  width: 100%;
+  height: auto;
+}
+
+/* ── Serge text in hero ── */
+.hero-serge-text {
+  font-family: var(--f-display);
+  font-size: clamp(48px, 9vw, 130px);
+  font-weight: 400;
+  letter-spacing: -0.03em;
+  line-height: 1;
+  color: #e5ecef;
+}
+.hero-serge-dot {
+  color: #ff7b2e;
+}
+
+/* ── Stats bar amber top line ── */
+.stats-amber-line::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--serge-amber), transparent);
+  opacity: 0.45;
+}
+
+/* ── Roster row hover bar ── */
+.roster-row {
+  position: relative;
+}
+.roster-row::before {
+  content: "";
+  position: absolute;
+  left: -2px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--serge-amber);
+  transform: scaleY(0);
+  transform-origin: bottom;
+  transition: transform 0.3s ease;
+}
+.roster-row:hover::before {
+  transform: scaleY(1);
+}
+
+/* ── Practice row hover gallery ── */
+.practice-row-gallery {
+  opacity: 0;
+  transform: translateY(8px);
+  pointer-events: none;
+  transition: opacity 0.28s, transform 0.32s;
+}
+.practice-row-link-el {
+  transition: opacity 0.2s, transform 0.2s;
+}
+.practice-row:hover .practice-row-link-el {
+  opacity: 0;
+  transform: translateY(-8px);
+  pointer-events: none;
+}
+.practice-row:hover .practice-row-gallery {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+.practice-row-thumb {
+  opacity: 0;
+  transform: translateY(10px) scale(0.97);
+  transition: opacity 0.28s, transform 0.35s, filter 0.35s;
+}
+.practice-row:hover .practice-row-thumb {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+.practice-row:hover .practice-row-thumb:nth-child(2) { transition-delay: 0.04s; }
+.practice-row:hover .practice-row-thumb:nth-child(3) { transition-delay: 0.08s; }
+
+@media (max-width: 1100px) {
+  .practice-row-gallery {
+    opacity: 1;
+    transform: none;
+    pointer-events: auto;
+  }
+  .practice-row-thumb {
+    opacity: 1;
+    transform: none;
+  }
+  .practice-row-link-el {
+    opacity: 1 !important;
+    transform: none !important;
+    pointer-events: auto !important;
+  }
+}
+
+/* ── Mega panel animation ── */
+@keyframes megaIn {
+  from { opacity: 0; transform: translateY(-6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.mega-panel-enter {
+  animation: megaIn 220ms ease both;
+}
+
+/* ── Work tile underline ── */
+.work-tile-title {
+  background-image: linear-gradient(var(--serge-amber), var(--serge-amber));
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  background-size: 0% 1px;
+  transition: background-size 0.4s;
+  padding-bottom: 2px;
+}
+.work-tile:hover .work-tile-title {
+  background-size: 100% 1px;
+}
+
+/* ── Firm team card view bio ── */
+.firm-team-view {
+  opacity: 0;
+  transform: translateY(4px);
+  transition: opacity 0.2s, transform 0.2s;
+}
+.firm-team-card:hover .firm-team-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── Mega overlay mobile ── */
+@media (max-width: 900px) {
+  .mega-overlay-grid.has-active .mega-overlay-cats { display: none; }
+  .mega-overlay-grid.has-active .mega-overlay-sub { display: flex; flex-direction: column; }
+}
+
+/* ── Contact form ── */
+.contact-form input,
+.contact-form textarea,
+.contact-form select {
+  width: 100%;
+  background: rgba(175,208,222,0.06);
+  border: 1px solid var(--serge-border-strong);
+  color: var(--serge-ink);
+  font-family: var(--f-sans);
+  font-size: 15px;
+  padding: 14px 18px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: var(--serge-muted);
+}
+.contact-form input:focus,
+.contact-form textarea:focus,
+.contact-form select:focus {
+  border-color: var(--serge-amber);
+}
+.contact-form select {
+  appearance: none;
+  cursor: pointer;
+}
+.contact-form select option {
+  background: #0c3245;
+  color: var(--serge-ink);
+}
+
+/* ── Newsletter responsive ── */
+@media (max-width: 900px) {
+  .newsletter-inner-grid {
+    grid-template-columns: 1fr !important;
+    gap: 40px !important;
+  }
+}
+
+/* ── Legal pages ── */
+@media (max-width: 640px) {
+  .legal-section-grid {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+  .legal-section-grid .legal-num {
+    position: static !important;
+  }
+}
+
+/* ── Footer ── */
+.footer-nav-link:hover {
+  opacity: 1 !important;
+  color: var(--serge-amber) !important;
+}
+.footer-email-link:hover {
+  color: var(--serge-amber) !important;
+  border-color: rgba(249,172,67,0.3) !important;
+}
+.footer-cta-link:hover {
+  background: rgba(255,255,255,0.06) !important;
+  color: #d9d9d9 !important;
+}
+.footer-legal-link:hover {
+  color: var(--serge-amber) !important;
+}
+@media (max-width: 768px) {
+  .footer-main-grid {
+    grid-template-columns: 1fr !important;
+    gap: 40px !important;
+  }
+  .footer-base-row {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+  }
 }
