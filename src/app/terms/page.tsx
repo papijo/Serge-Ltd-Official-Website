@@ -6,7 +6,7 @@ export const metadata: Metadata = {
     "The terms governing use of the SERGE website and engagement with the firm's advisory services.",
   alternates: { canonical: "https://weareserge.com/terms" },
   openGraph: {
-    title: "Terms and Conditions | SERGE",
+    title: "Serge Ltd | Terms and Conditions",
     url: "https://weareserge.com/terms",
   },
 };

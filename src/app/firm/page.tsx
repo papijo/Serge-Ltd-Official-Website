@@ -8,13 +8,13 @@ import { FirmMarquee } from "@/components/sections/FirmMarquee";
 export const metadata: Metadata = {
   title: "The Firm",
   description:
-    "SERGE was established in 2015. Three offices, forty senior advisors, and a constrained mandate load — built for institutional consequence.",
-  alternates: { canonical: "https://serge.firm/firm" },
+    "Serge Ltd is a global consulting and technology firm working across technology, strategy, and communications — for corporations, governments, and growing businesses.",
+  alternates: { canonical: "https://weareserge.com/firm" },
   openGraph: {
-    title: "The Firm | SERGE",
+    title: "Serge Ltd | The Firm",
     description:
-      "An advisory practice built for institutional consequence since 2015.",
-    url: "https://serge.firm/firm",
+      "A multidisciplinary firm built to help organisations build, transform, and compete.",
+    url: "https://weareserge.com/firm",
   },
 };
 
@@ -45,11 +45,10 @@ export default function FirmPage() {
               letterSpacing: "-0.02em",
             }}
           >
-            We guide institutions
+            Built to build, advise,
             <br />
-            through decisions{" "}
             <em style={{ fontStyle: "italic", color: "#f9ac43", fontFamily: "var(--f-display)" }}>
-              that endure.
+              and communicate.
             </em>
           </h1>
         </div>
@@ -92,14 +91,14 @@ export default function FirmPage() {
               letterSpacing: "-0.01em",
             }}
           >
-            An advisory practice built
+            A multidisciplinary firm
             <br />
-            for institutional consequence.
+            built for organisations that want to move.
           </h2>
           {[
-            "SERGE was established in 2015 by a small group of partners who had spent two decades inside global advisory houses. We chose deliberate scale: three offices, forty senior advisors, and a constrained mandate load. The work we accept is the work we can be accountable for.",
-            "The partnership exists to support a small number of leaders each year through decisions whose consequences outlast the engagement — operating reform, capital allocation, and the governance of complex institutions. We do not seek volume. We seek consequence.",
-            "Our work spans governments, enterprise boards, and data-intensive institutions. What these clients share is not sector — it is the weight of the decision they face, and the need for an advisor who will remain accountable for the outcome rather than the output.",
+            "Serge Ltd was founded to close the gap between strategy and execution — bringing together consulting, technology, and communications under one roof. We work with corporations, governments, political organisations, and growing businesses across the world.",
+            "Our work is genuinely multidisciplinary. A client working with us on digital transformation may also benefit from our communications counsel. A political organisation building its brand may also need our strategic advisory. We join these capabilities deliberately.",
+            "What our clients share is not sector — it is ambition. They are organisations that want to build something real, lead with clarity, and communicate with purpose.",
           ].map((p) => (
             <p key={p.slice(0, 20)} className="mb-4 last:mb-0 text-[#6b90a0]" style={{ fontSize: 16, lineHeight: 1.7, maxWidth: "54ch" }}>
               {p}
@@ -133,9 +132,9 @@ export default function FirmPage() {
 
         <div className="pt-14" style={{ gridColumn: 2, gridRow: 2 }}>
           {[
-            "We design for the decision, not the deliverable. A document is not a decision. A model is not an outcome. A recommendation is not a result. The work is finished when leadership has acted and the result is measurable.",
-            "Every engagement at SERGE is led by a partner. Not passed to an associate, not delegated to a team without senior oversight. The client's most consequential decision deserves the firm's most experienced judgment — and that is what we commit to in every mandate we accept.",
-            "We have declined more mandates than we have accepted. Not because of capacity, but because of fit. If the decision does not require the depth of our practice, we will say so directly. Selective engagement is not a posture — it is how we protect the standard.",
+            "We work in genuine partnership with our clients. Every engagement is handled by senior people who bring both depth and breadth to the work. No unnecessary layers.",
+            "We are selective about the work we take on — not because of capacity, but because we only work where we can make a real difference. If a brief does not fit our practice, we say so.",
+            "Serge Ltd is a global firm with a local mindset. We work where our clients need us, and we bring the same standard wherever we go.",
           ].map((p) => (
             <p key={p.slice(0, 20)} className="mb-4 last:mb-0 text-[#6b90a0]" style={{ fontSize: 16, lineHeight: 1.7, maxWidth: "54ch" }}>
               {p}
@@ -181,17 +180,17 @@ export default function FirmPage() {
             {
               num: "01",
               title: "Vision",
-              body: "To be the most trusted advisory partner for leaders navigating institutional complexity — delivering clarity where decisions carry long-term consequence.",
+              body: "To be the most trusted partner for organisations navigating complexity — whether the challenge is technology, strategy, or communications.",
             },
             {
               num: "02",
               title: "Mission",
-              body: "We design and execute strategy that translates intent into measurable outcomes across public institutions, enterprise portfolios, and data systems.",
+              body: "We bring together consulting, technology, and communications to help organisations build, transform, and lead — in a way that is practical, clear, and lasting.",
             },
             {
               num: "03",
               title: "Core Values",
-              body: "Judgment with integrity. Execution with discipline. Accountability for outcomes. Stewardship of client trust in every mandate we accept.",
+              body: "Integrity in every engagement. Clarity over complexity. Accountability for results, not just recommendations.",
             },
           ].map((pillar) => (
             <article
@@ -242,10 +241,11 @@ export default function FirmPage() {
         }}
         aria-label="Firm statistics"
       >
+        {/* TODO: Update these figures with actual Serge Ltd data */}
         {[
-          { num: "120", suffix: "+", label: "Mandates Delivered" },
-          { num: "100", suffix: "%", label: "Partner-Led" },
-          { num: "9", suffix: "", label: "Jurisdictions" },
+          { num: "120", suffix: "+", label: "Projects Delivered" },
+          { num: "3", suffix: "", label: "Practice Areas" },
+          { num: "9", suffix: "", label: "Countries" },
           { num: "2015", suffix: "", label: "Established" },
         ].map((stat) => (
           <div key={stat.label} className="flex flex-col gap-1.5">
@@ -293,7 +293,7 @@ export default function FirmPage() {
             className="font-sans font-semibold uppercase text-[#ff7b2e]"
             style={{ fontSize: 11, letterSpacing: "0.24em" }}
           >
-            Meet the Managing Partner
+            From the Founders
           </span>
           <blockquote
             id="founder-quote"
@@ -307,20 +307,21 @@ export default function FirmPage() {
               maxWidth: "28ch",
             }}
           >
-            We do not measure the work by the size of the engagement. We measure it by what holds
-            after we leave.
+            The best work outlasts the project. Systems that keep running. Strategies that hold.
+            Brands that are remembered.
           </blockquote>
+          {/* TODO: Replace with actual founder name and title */}
           <p
             className="mt-2.5 mb-0"
             style={{ fontFamily: "var(--f-display)", fontSize: 18, color: "#e2ecf0" }}
           >
-            Henrik Aaltonen
+            [Founder Name]
           </p>
           <p
             className="m-0 font-sans uppercase text-[#6b90a0]"
             style={{ fontSize: 12, letterSpacing: "0.18em" }}
           >
-            Managing Partner & Co-founder — SERGE
+            [Title] — Serge Ltd
           </p>
         </div>
         <div className="overflow-hidden" style={{ aspectRatio: "4/5" }}>
@@ -471,22 +472,20 @@ export default function FirmPage() {
               letterSpacing: "-0.01em",
             }}
           >
-            Built for the
+            Work that
             <br />
-            consequential few.
+            matters.
           </h2>
         </header>
         <div className="flex flex-col gap-4" style={{ maxWidth: "54ch" }}>
           <p className="text-[#6b90a0] reveal" style={{ fontSize: 16, lineHeight: 1.7 }}>
-            We recruit a small number of exceptional advisors each year — people who have already
-            demonstrated the capacity to operate at the level our clients require. We do not offer
-            graduate programmes or structured rotations. We offer proximity to consequential work
-            from day one.
+            We work across technology, strategy, and communications — and we recruit people who can
+            move between disciplines. Whether you come from software engineering, strategic
+            consulting, brand, or public affairs, we want to hear from you.
           </p>
           <p className="text-[#6b90a0] reveal" style={{ fontSize: 16, lineHeight: 1.7 }}>
-            If you have deep expertise in public sector reform, enterprise strategy, capital markets,
-            or data governance — and you are looking for a practice where your judgment will be used,
-            not managed — we would like to hear from you.
+            If you are skilled, adaptable, and want to work on projects that matter — across sectors
+            and borders — we would like to hear from you.
           </p>
           <Link
             href="/contact"

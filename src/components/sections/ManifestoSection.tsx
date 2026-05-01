@@ -43,18 +43,18 @@ export function ManifestoSection() {
             color: "#e2ecf0",
           }}
         >
-          We translate
+          We build.
           <br />
-          <em style={{ fontStyle: "italic", color: "#f9ac43" }}>complexity</em>
+          <em style={{ fontStyle: "italic", color: "#f9ac43" }}>We advise.</em>
           <br />
-          into execution.
+          We communicate.
         </p>
 
         <div className="flex flex-col gap-2.5 opacity-55">
           {[
-            "Where the decision is consequential.",
-            "Where the outcome must be measurable.",
-            "Where the work does not end at the deck.",
+            "For corporations, governments, and growing businesses.",
+            "Three disciplines. One integrated partnership.",
+            "Wherever in the world you need us.",
           ].map((line) => (
             <span
               key={line}

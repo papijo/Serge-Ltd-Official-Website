@@ -9,7 +9,7 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ["/api/"],
       },
     ],
-    sitemap: "https://serge.firm/sitemap.xml",
-    host: "https://serge.firm",
+    sitemap: "https://weareserge.com/sitemap.xml",
+    host: "https://weareserge.com",
   };
 }

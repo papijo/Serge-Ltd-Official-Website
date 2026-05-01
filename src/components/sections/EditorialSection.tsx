@@ -89,8 +89,9 @@ export function EditorialSection() {
               color: "rgba(226,236,240,0.72)",
             }}
           >
-            We guide leaders through complex institutional decisions — from strategic framing to
-            implementation design — across government, enterprise, and data transformation mandates.
+            Serge Ltd is a global consulting and technology firm. We work with corporations,
+            governments, political organisations, and growing businesses — helping them build,
+            transform, communicate, and compete.
           </p>
           <p
             style={{
@@ -100,8 +101,8 @@ export function EditorialSection() {
               color: "rgba(226,236,240,0.72)",
             }}
           >
-            Every engagement is a direct partnership with our senior advisors. No hand-offs. No
-            associates. No ambiguity about accountability.
+            Our work spans technology, strategy, and communications. Three integrated disciplines.
+            One firm, wherever you need us.
           </p>
           <Link
             href="/services"

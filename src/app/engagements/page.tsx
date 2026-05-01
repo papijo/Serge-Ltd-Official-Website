@@ -6,11 +6,11 @@ export const metadata: Metadata = {
   title: "Engagements",
   description:
     "Selected engagements from 2018–2025 across government, enterprise, data, and capital mandates.",
-  alternates: { canonical: "https://serge.firm/engagements" },
+  alternates: { canonical: "https://weareserge.com/engagements" },
   openGraph: {
-    title: "Engagements | SERGE",
+    title: "Serge Ltd | Engagements",
     description: "Government reform, enterprise restructuring, and sovereign capital review.",
-    url: "https://serge.firm/engagements",
+    url: "https://weareserge.com/engagements",
   },
 };
 
@@ -25,13 +25,13 @@ export default function EngagementsPage() {
         style={{ padding: "clamp(100px,12vw,160px) 48px 40px" }}
         aria-labelledby="engagements-page-heading"
       >
-        <span
+        <h1
           id="engagements-page-heading"
           className="font-sans font-semibold uppercase text-[#6b90a0]"
           style={{ fontSize: 11, letterSpacing: "0.22em" }}
         >
           Engagements / 2018 — 2025
-        </span>
+        </h1>
         <nav aria-label="Filter engagements">
           <ul className="list-none p-0 m-0 flex gap-7 flex-wrap" role="tablist">
             {FILTERS.map((f, i) => (

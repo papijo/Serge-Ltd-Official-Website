@@ -4,15 +4,15 @@ import Link from "next/link";
 import { SERVICES, PROCESS_STEPS } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "Capabilities",
+  title: "Services",
   description:
-    "Three disciplines deployed together when the decision carries consequence — Corporate Consulting, Digital Transformation, and Data & Strategy.",
-  alternates: { canonical: "https://serge.firm/services" },
+    "Three integrated practice areas — Technology & Digital Innovation, Strategy & Advisory, and Brand & Communications — for organisations that need to build, transform, and compete.",
+  alternates: { canonical: "https://weareserge.com/services" },
   openGraph: {
-    title: "Capabilities | SERGE",
+    title: "Serge Ltd | Services",
     description:
-      "Corporate strategy, digital transformation, and decision infrastructure for executives and boards.",
-    url: "https://serge.firm/services",
+      "Technology, strategy, and communications services for corporations, governments, and growing businesses.",
+    url: "https://weareserge.com/services",
   },
 };
 
@@ -31,7 +31,7 @@ export default function ServicesPage() {
         >
           Capabilities
         </span>
-        <p
+        <h1
           id="svc-heading"
           className="m-0 text-[#e2ecf0]"
           style={{
@@ -43,9 +43,8 @@ export default function ServicesPage() {
             maxWidth: "32ch",
           }}
         >
-          Three disciplines. Deployed together when the decision in front of the organisation carries
-          consequence.
-        </p>
+          Three practice areas. Built for organisations that need to build, transform, and be heard.
+        </h1>
         <div
           className="mt-9 w-full overflow-hidden border border-[rgba(175,208,222,0.11)]"
           style={{ aspectRatio: "16/6", maxWidth: 1080 }}
@@ -308,12 +307,12 @@ export default function ServicesPage() {
           className="text-[#6b90a0]"
           style={{ fontFamily: "var(--f-display)", fontSize: "clamp(18px,1.8vw,26px)" }}
         >
-          Mandates are reviewed individually.{" "}
+          Every project begins with a conversation.{" "}
           <Link
             href="/contact"
             className="text-[#e2ecf0] no-underline border-b border-[#ff7b2e] pb-0.5 transition-colors hover:text-[#ff7b2e]"
           >
-            Submit an inquiry →
+            Get in touch →
           </Link>
         </p>
       </section>

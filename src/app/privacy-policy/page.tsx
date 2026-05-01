@@ -6,7 +6,7 @@ export const metadata: Metadata = {
     "How SERGE collects, uses, and protects your personal information.",
   alternates: { canonical: "https://weareserge.com/privacy-policy" },
   openGraph: {
-    title: "Privacy Policy | SERGE",
+    title: "Serge Ltd | Privacy Policy",
     url: "https://weareserge.com/privacy-policy",
   },
 };

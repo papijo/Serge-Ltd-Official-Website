@@ -5,11 +5,11 @@ export const metadata: Metadata = {
   title: "Contact",
   description:
     "Engagements accepted by referral and review. Contact the SERGE partnership to submit an enquiry.",
-  alternates: { canonical: "https://serge.firm/contact" },
+  alternates: { canonical: "https://weareserge.com/contact" },
   openGraph: {
-    title: "Contact | SERGE",
+    title: "Serge Ltd | Contact",
     description: "Submit an enquiry to the SERGE partnership.",
-    url: "https://serge.firm/contact",
+    url: "https://weareserge.com/contact",
   },
 };
 
