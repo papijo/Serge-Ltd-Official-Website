@@ -16,8 +16,8 @@ const barlow = Barlow({
 export const metadata: Metadata = {
   metadataBase: new URL("https://weareserge.com"),
   title: {
-    default: "Serge Ltd",
-    template: "Serge Ltd | %s",
+    default: "Serge",
+    template: "Serge | %s",
   },
   description:
     "Serge Ltd is a global consulting and technology firm working with corporations, governments, political organisations, and growing businesses across technology, strategy, and communications.",

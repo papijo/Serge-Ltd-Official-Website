@@ -256,10 +256,10 @@ export default function FirmPage() {
       >
         {/* TODO: Update these figures with actual Serge Ltd data */}
         {[
-          { num: "120", suffix: "+", label: "Projects Delivered" },
+          { num: "3", suffix: "+", label: "Projects Delivered" },
           { num: "3", suffix: "", label: "Practice Areas" },
-          { num: "9", suffix: "", label: "Countries" },
-          { num: "2015", suffix: "", label: "Established" },
+          { num: "1", suffix: "", label: "Countries" },
+          { num: "2026", suffix: "", label: "Established" },
         ].map((stat) => (
           <div key={stat.label} className="flex flex-col gap-1.5">
             <span
@@ -323,18 +323,17 @@ export default function FirmPage() {
             The best work outlasts the project. Systems that keep running. Strategies that hold.
             Brands that are remembered.
           </blockquote>
-          {/* TODO: Replace with actual founder name and title */}
           <p
             className="mt-2.5 mb-0"
             style={{ fontFamily: "var(--f-display)", fontSize: 18, color: "#e2ecf0" }}
           >
-            [Founder Name]
+            Ehi Ero-Omoighe III
           </p>
           <p
             className="m-0 font-sans uppercase text-[#6b90a0]"
             style={{ fontSize: 12, letterSpacing: "0.18em" }}
           >
-            [Title] — Serge
+            Managing Partner — Serge
           </p>
         </div>
         <div className="overflow-hidden" style={{ aspectRatio: "4/5" }}>
@@ -353,8 +352,8 @@ export default function FirmPage() {
       {/* Leadership */}
       <FirmTeamSection partners={PARTNER_DATA} />
 
-      {/* Offices */}
-      <section
+      {/* Offices — hidden until addresses are confirmed */}
+      {false && <section
         id="offices"
         className="max-w-[1440px] mx-auto border-t border-[rgba(175,208,222,0.11)]"
         style={{ padding: "72px clamp(24px,5vw,80px)" }}
@@ -422,7 +421,7 @@ export default function FirmPage() {
             </div>
           ))}
         </div>
-      </section>
+      </section>}
 
       {/* Clients */}
       <section

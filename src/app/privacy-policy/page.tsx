@@ -50,7 +50,7 @@ const SECTIONS = [
     id: "data-security",
     title: "Data Security",
     body: [
-      "We implement appropriate technical and organisational measures to protect your personal information against unauthorised access, alteration, disclosure, or destruction. All correspondence sent to partners@weareserge.com is encrypted in transit.",
+      "We implement appropriate technical and organisational measures to protect your personal information against unauthorised access, alteration, disclosure, or destruction. All correspondence sent to hello@weareserge.com is encrypted in transit.",
       "Whilst we take reasonable steps to protect your information, no transmission of data over the internet is entirely secure. We cannot guarantee the security of information transmitted to our website and you do so at your own risk.",
     ],
   },
@@ -67,7 +67,7 @@ const SECTIONS = [
     title: "Your Rights",
     body: [
       "Subject to applicable law, you may have the right to access the personal information we hold about you, to request correction of inaccurate data, to request deletion of your information, to object to or restrict our processing of your data, and to receive your data in a portable format.",
-      "To exercise any of these rights, please contact us at partners@weareserge.com. We will respond to all legitimate requests within thirty days. In certain circumstances, we may need to verify your identity before processing your request.",
+      "To exercise any of these rights, please contact us at hello@weareserge.com. We will respond to all legitimate requests within thirty days. In certain circumstances, we may need to verify your identity before processing your request.",
     ],
   },
   {
@@ -198,10 +198,10 @@ export default function PrivacyPolicyPage() {
                   <span className="font-semibold text-[#e2ecf0]">SERGE Advisory Partners</span>
                   <span>399 Park Avenue, New York, NY 10022</span>
                   <a
-                    href="mailto:partners@weareserge.com"
+                    href="mailto:hello@weareserge.com"
                     className="text-[#ff7b2e] no-underline hover:text-[#f9ac43] transition-colors"
                   >
-                    partners@weareserge.com
+                    hello@weareserge.com
                   </a>
                 </address>
               )}

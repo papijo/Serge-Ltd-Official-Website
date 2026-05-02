@@ -212,10 +212,10 @@ export default function TermsPage() {
                   <span className="font-semibold text-[#e2ecf0]">SERGE Advisory Partners</span>
                   <span>399 Park Avenue, New York, NY 10022</span>
                   <a
-                    href="mailto:partners@weareserge.com"
+                    href="mailto:hello@weareserge.com"
                     className="text-[#ff7b2e] no-underline hover:text-[#f9ac43] transition-colors"
                   >
-                    partners@weareserge.com
+                    hello@weareserge.com
                   </a>
                 </address>
               )}

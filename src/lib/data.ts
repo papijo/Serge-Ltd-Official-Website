@@ -84,8 +84,8 @@ export const PARTNER_DATA = [
     id: "praisejah",
     name: "Praisejah Sunday",
     role: "Partner & Co-Founder",
-    photo: "/images/partners/placeholder-female.svg",
-    bio: "",
+    photo: "/images/partners/praisejah-ebhota.png",
+    bio: "Praise-Jah Ebhota is a Partner at Serge, where she contributes to the firm's communication, brand positioning, and stakeholder engagement efforts across its engagements. She supports the development and execution of communication strategies that enhance visibility, strengthen reputation, and ensure clarity in how Serge's work is presented to clients and the broader market.\n\nHer expertise strengthens the connection between communication and business outcomes. Through structured content development, market insight, and audience-focused messaging, she supports strategic initiatives, improves engagement, and ensures consistency across brand and communication touchpoints.\n\nPrior to joining Serge, Praise-Jah worked as a Public Relations and Marketing Associate at Vintage Villas in Abuja, where she was responsible for developing reports and briefs for management, analyzing market trends and customer behavior, and executing campaigns to improve brand positioning and client engagement. She also coordinated events, managed client communications, and monitored campaign performance to optimize results. Earlier, she served as a Public Relations Intern at the Industrial Training Fund in Jos, where she contributed to press releases, internal publications, event coordination, and data analysis for organizational reporting.\n\nPraise-Jah holds a Bachelor of Arts degree in Mass Communication from the University of Jos. She brings a practical, detail-oriented approach to communication, combining content, analysis, and execution to deliver measurable value across projects and engagements.",
   },
   {
     id: "shalom",

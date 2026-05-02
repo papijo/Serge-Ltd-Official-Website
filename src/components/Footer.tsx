@@ -101,7 +101,7 @@ export function Footer() {
               letterSpacing: "0.04em",
             }}
           >
-            New York · London · Singapore
+            Abuja · Benin
           </span>
         </div>
 
@@ -119,7 +119,7 @@ export function Footer() {
             Engagements
           </span>
           <a
-            href="mailto:partners@serge.firm"
+            href="mailto:hello@weareserge.com"
             className="footer-email-link no-underline w-fit"
             style={{
               fontFamily: "var(--f-display)",
@@ -132,7 +132,7 @@ export function Footer() {
               transition: "color 0.3s, border-color 0.3s",
             }}
           >
-            partners@serge.firm
+            hello@weareserge.com
           </a>
           <Link
             href="/contact"
