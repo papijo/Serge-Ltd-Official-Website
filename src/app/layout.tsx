@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Barlow } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
@@ -184,6 +185,19 @@ export default function RootLayout({
         <RevealObserver />
         <Newsletter />
         <Footer />
+
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-CVYELGZ4D8"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-CVYELGZ4D8');
+          `}
+        </Script>
       </body>
     </html>
   );
