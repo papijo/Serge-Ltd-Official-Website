@@ -9,8 +9,7 @@ import { RevealObserver } from "@/components/RevealObserver";
 
 const barlow = Barlow({
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
-  style: ["normal", "italic"],
+  weight: ["400", "500", "600"],
   variable: "--font-barlow",
   display: "swap",
 });

@@ -10,9 +10,9 @@ import { PrinciplesSection } from "@/components/sections/PrinciplesSection";
 import { CommandingCTA } from "@/components/sections/CommandingCTA";
 
 export const metadata: Metadata = {
-  title: { absolute: "Serge Ltd" },
+  title: { absolute: "Serge Ltd | Consulting, Technology & Communications" },
   description:
-    "Serge Ltd is a global consulting and technology firm. We help corporations, governments, and growing businesses build, transform, and compete — across technology, strategy, and communications.",
+    "Serge Ltd — consulting, technology, and communications for corporations, governments, and growing businesses. We help organisations build, transform, and compete worldwide.",
   alternates: { canonical: "https://weareserge.com" },
 };
 

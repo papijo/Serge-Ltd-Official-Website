@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Privacy Policy",
   description:
-    "How SERGE collects, uses, and protects your personal information.",
+    "How Serge Ltd collects, uses, and protects your personal information when you visit weareserge.com or engage with our consulting and technology services.",
   alternates: { canonical: "https://weareserge.com/privacy-policy" },
   openGraph: {
     title: "Serge Ltd | Privacy Policy",

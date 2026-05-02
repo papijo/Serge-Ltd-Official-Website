@@ -2,20 +2,34 @@ import type { Metadata } from "next";
 import { ContactForm } from "@/components/sections/ContactForm";
 
 export const metadata: Metadata = {
-  title: "Contact",
+  title: "Get in Touch — Global Consulting & Technology",
   description:
-    "Engagements accepted by referral and review. Contact the SERGE partnership to submit an enquiry.",
+    "Get in touch with Serge Ltd, a global consulting and technology firm. Reach us about technology, strategy, or brand communications projects for your organisation.",
   alternates: { canonical: "https://weareserge.com/contact" },
   openGraph: {
-    title: "Serge Ltd | Contact",
-    description: "Submit an enquiry to the SERGE partnership.",
+    title: "Serge Ltd | Get in Touch",
+    description: "Contact Serge Ltd — global consulting, technology, and communications firm serving corporations, governments, and growing businesses.",
     url: "https://weareserge.com/contact",
   },
 };
 
 export default function ContactPage() {
   return (
-    <section
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              { "@type": "ListItem", position: 1, name: "Home", item: "https://weareserge.com" },
+              { "@type": "ListItem", position: 2, name: "Contact", item: "https://weareserge.com/contact" },
+            ],
+          }),
+        }}
+      />
+      <section
       className="max-w-[860px] mx-auto flex flex-col justify-center"
       style={{
         padding: "clamp(120px,14vw,180px) 48px",
@@ -43,9 +57,9 @@ export default function ContactPage() {
             maxWidth: "22ch",
           }}
         >
-          Engagements accepted
+          Get in touch
           <br />
-          by referral and review.
+          with Serge Ltd.
         </h1>
       </header>
 
@@ -99,5 +113,6 @@ export default function ContactPage() {
 
       <ContactForm />
     </section>
+    </>
   );
 }

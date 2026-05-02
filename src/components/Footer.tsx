@@ -203,7 +203,7 @@ export function Footer() {
               color: "rgba(226,236,240,0.88)",
             }}
           >
-            © {new Date().getFullYear()} All Rights Reserved
+            © {new Date().getFullYear()} Serge Ltd. All Rights Reserved
           </span>
         </div>
       </div>

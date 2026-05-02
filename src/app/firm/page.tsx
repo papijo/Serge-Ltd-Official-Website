@@ -6,14 +6,14 @@ import { FirmTeamSection } from "@/components/sections/FirmTeamSection";
 import { FirmMarquee } from "@/components/sections/FirmMarquee";
 
 export const metadata: Metadata = {
-  title: "The Firm",
+  title: "About the Firm — Global Consulting & Technology",
   description:
-    "Serge Ltd is a global consulting and technology firm working across technology, strategy, and communications — for corporations, governments, and growing businesses.",
+    "Serge Ltd is a multidisciplinary consulting and technology firm working across technology, strategy, and communications for corporations, governments, and growing businesses worldwide.",
   alternates: { canonical: "https://weareserge.com/firm" },
   openGraph: {
-    title: "Serge Ltd | The Firm",
+    title: "Serge Ltd | About the Firm — Global Consulting & Technology",
     description:
-      "A multidisciplinary firm built to help organisations build, transform, and compete.",
+      "A multidisciplinary consulting and technology firm — helping organisations build, transform, and compete.",
     url: "https://weareserge.com/firm",
   },
 };
@@ -21,6 +21,19 @@ export const metadata: Metadata = {
 export default function FirmPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              { "@type": "ListItem", position: 1, name: "Home", item: "https://weareserge.com" },
+              { "@type": "ListItem", position: 2, name: "The Firm", item: "https://weareserge.com/firm" },
+            ],
+          }),
+        }}
+      />
       {/* Hero */}
       <section
         className="max-w-[1440px] mx-auto flex flex-col"
@@ -45,8 +58,9 @@ export default function FirmPage() {
               letterSpacing: "-0.02em",
             }}
           >
-            Built to build, advise,
+            Serge Ltd —
             <br />
+            built to build, advise,{" "}
             <em style={{ fontStyle: "italic", color: "#f9ac43", fontFamily: "var(--f-display)" }}>
               and communicate.
             </em>
@@ -55,7 +69,7 @@ export default function FirmPage() {
         <div className="w-full overflow-hidden" style={{ aspectRatio: "16/7" }}>
           <Image
             src="/images/about/about-team-hero.jpg"
-            alt="The SERGE partnership"
+            alt="The Serge Ltd team"
             width={1440}
             height={630}
             className="w-full h-full object-cover"
@@ -98,7 +112,7 @@ export default function FirmPage() {
           {[
             "Serge Ltd was founded to close the gap between strategy and execution — bringing together consulting, technology, and communications under one roof. We work with corporations, governments, political organisations, and growing businesses across the world.",
             "Our work is genuinely multidisciplinary. A client working with us on digital transformation may also benefit from our communications counsel. A political organisation building its brand may also need our strategic advisory. We join these capabilities deliberately.",
-            "What our clients share is not sector — it is ambition. They are organisations that want to build something real, lead with clarity, and communicate with purpose.",
+            "What our clients share is not sector — it is ambition. We work with organisations across Europe, the Americas, Asia-Pacific, and Africa, including Nigeria, who want to build something real, lead with clarity, and communicate with purpose.",
           ].map((p) => (
             <p key={p.slice(0, 20)} className="mb-4 last:mb-0 text-[#6b90a0]" style={{ fontSize: 16, lineHeight: 1.7, maxWidth: "54ch" }}>
               {p}
@@ -497,8 +511,8 @@ export default function FirmPage() {
         </div>
       </section>
 
-      {/* Press */}
-      <section
+      {/* Press — hidden until PRESS_ITEMS has real entries */}
+      {PRESS_ITEMS.length > 0 && <section
         id="press"
         className="max-w-[1440px] mx-auto border-t border-[rgba(175,208,222,0.11)]"
         style={{ padding: "72px clamp(24px,5vw,80px)" }}
@@ -549,7 +563,7 @@ export default function FirmPage() {
             </li>
           ))}
         </ul>
-      </section>
+      </section>}
 
       {/* Marquee */}
       <FirmMarquee />

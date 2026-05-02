@@ -4,14 +4,14 @@ import Link from "next/link";
 import { SERVICES, PROCESS_STEPS } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "Services",
+  title: "Services — Technology, Strategy & Brand",
   description:
-    "Three integrated practice areas — Technology & Digital Innovation, Strategy & Advisory, and Brand & Communications — for organisations that need to build, transform, and compete.",
+    "Serge Ltd's three practice areas: Technology & Digital Innovation, Strategy & Advisory, and Brand & Communications — built for businesses, governments, and organisations worldwide.",
   alternates: { canonical: "https://weareserge.com/services" },
   openGraph: {
-    title: "Serge Ltd | Services",
+    title: "Serge Ltd | Services — Technology, Strategy & Brand",
     description:
-      "Technology, strategy, and communications services for corporations, governments, and growing businesses.",
+      "Technology, strategy, and communications services for corporations, governments, and growing businesses worldwide.",
     url: "https://weareserge.com/services",
   },
 };
@@ -19,6 +19,19 @@ export const metadata: Metadata = {
 export default function ServicesPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              { "@type": "ListItem", position: 1, name: "Home", item: "https://weareserge.com" },
+              { "@type": "ListItem", position: 2, name: "Services", item: "https://weareserge.com/services" },
+            ],
+          }),
+        }}
+      />
       {/* Intro */}
       <section
         className="max-w-[1280px] mx-auto"
@@ -45,6 +58,19 @@ export default function ServicesPage() {
         >
           Three practice areas. Built for organisations that need to build, transform, and be heard.
         </h1>
+        <p
+          className="mt-5 mb-0"
+          style={{
+            fontFamily: "var(--f-sans)",
+            fontSize: "clamp(14px,1vw,17px)",
+            lineHeight: 1.6,
+            color: "rgba(226,236,240,0.5)",
+            maxWidth: "52ch",
+          }}
+        >
+          Serge Ltd brings together consulting, technology, and communications in three integrated
+          practice areas — delivered for corporations, governments, and growing businesses worldwide.
+        </p>
         <div
           className="mt-9 w-full overflow-hidden border border-[rgba(175,208,222,0.11)]"
           style={{ aspectRatio: "16/6", maxWidth: 1080 }}

@@ -88,11 +88,11 @@ export function HeroSection() {
       </div>
 
       {/* Right: wordmark */}
-      <figure className="m-0 justify-self-end self-center z-[2]" aria-hidden="true">
+      <figure className="m-0 justify-self-end self-center z-[2]">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src="/serge-wordmark-white.svg"
-          alt=""
+          alt="Serge Ltd"
           style={{
             width: "clamp(220px,25vw,430px)",
             height: "auto",

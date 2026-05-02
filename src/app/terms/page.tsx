@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Terms and Conditions",
   description:
-    "The terms governing use of the SERGE website and engagement with the firm's advisory services.",
+    "The terms and conditions governing your use of the Serge Ltd website at weareserge.com and engagement with our consulting and technology services.",
   alternates: { canonical: "https://weareserge.com/terms" },
   openGraph: {
     title: "Serge Ltd | Terms and Conditions",

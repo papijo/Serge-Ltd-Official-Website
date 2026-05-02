@@ -3,13 +3,13 @@ import Link from "next/link";
 import { WORK_TILES } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "Engagements",
+  title: "Selected Projects & Client Engagements",
   description:
-    "Selected engagements from 2018–2025 across government, enterprise, data, and capital mandates.",
+    "A selection of Serge Ltd's work — technology, strategy, and communications projects for corporations, governments, and growing businesses across the world.",
   alternates: { canonical: "https://weareserge.com/engagements" },
   openGraph: {
-    title: "Serge Ltd | Engagements",
-    description: "Government reform, enterprise restructuring, and sovereign capital review.",
+    title: "Serge Ltd | Selected Projects & Client Engagements",
+    description: "Technology, strategy, and communications projects for corporations, governments, and growing businesses worldwide.",
     url: "https://weareserge.com/engagements",
   },
 };
@@ -19,6 +19,19 @@ const FILTERS = ["All", "Government", "Enterprise", "Data", "Capital"];
 export default function EngagementsPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              { "@type": "ListItem", position: 1, name: "Home", item: "https://weareserge.com" },
+              { "@type": "ListItem", position: 2, name: "Engagements", item: "https://weareserge.com/engagements" },
+            ],
+          }),
+        }}
+      />
       {/* Intro + filters */}
       <section
         className="max-w-[1440px] mx-auto flex justify-between items-baseline flex-wrap gap-12"
@@ -30,7 +43,7 @@ export default function EngagementsPage() {
           className="font-sans font-semibold uppercase text-[#6b90a0]"
           style={{ fontSize: 11, letterSpacing: "0.22em" }}
         >
-          Engagements / 2018 — 2025
+          Serge Ltd — Selected Work / 2018 — 2025
         </h1>
         <nav aria-label="Filter engagements">
           <ul className="list-none p-0 m-0 flex gap-7 flex-wrap" role="tablist">

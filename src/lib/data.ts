@@ -291,14 +291,8 @@ export const PROCESS_STEPS = [
   },
 ];
 
-// TODO: Replace with actual press coverage for Serge Ltd
-export const PRESS_ITEMS = [
-  { date: "[Date]", title: "[PLACEHOLDER — Press item 1]", outlet: "[Publication]" },
-  { date: "[Date]", title: "[PLACEHOLDER — Press item 2]", outlet: "[Publication]" },
-  { date: "[Date]", title: "[PLACEHOLDER — Press item 3]", outlet: "[Publication]" },
-  { date: "[Date]", title: "[PLACEHOLDER — Press item 4]", outlet: "[Publication]" },
-  { date: "[Date]", title: "[PLACEHOLDER — Press item 5]", outlet: "[Publication]" },
-];
+// Add real press items here when available — { date, title, outlet }
+export const PRESS_ITEMS: { date: string; title: string; outlet: string }[] = [];
 
 export const OFFICES = [
   {
