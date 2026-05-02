@@ -84,14 +84,14 @@ export const PARTNER_DATA = [
     id: "praisejah",
     name: "Praisejah Sunday",
     role: "Partner & Co-Founder",
-    photo: "/images/about/about-partner-1.jpg",
+    photo: "/images/partners/placeholder-female.svg",
     bio: "",
   },
   {
     id: "shalom",
     name: "Shalom Ero-Omoighe",
     role: "Partner & Co-Founder",
-    photo: "/images/about/about-partner-2.jpg",
+    photo: "/images/partners/placeholder-female.svg",
     bio: "",
   },
   {

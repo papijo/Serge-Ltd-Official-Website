@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500">
+  <!-- Background -->
+  <rect width="400" height="500" fill="#071a28"/>
+  <!-- Long hair (behind head) -->
+  <ellipse cx="200" cy="148" rx="78" ry="115" fill="#0e2e45"/>
+  <!-- Head -->
+  <circle cx="200" cy="152" r="56" fill="#0e2e45"/>
+  <!-- Hair parted at top, flows past shoulders -->
+  <path d="M124 145 C118 170 114 200 116 230 C118 245 122 258 122 258 L134 252 C132 238 130 220 130 205 C130 185 132 165 136 150Z" fill="#0e2e45"/>
+  <path d="M276 145 C282 170 286 200 284 230 C282 245 278 258 278 258 L266 252 C268 238 270 220 270 205 C270 185 268 165 264 150Z" fill="#0e2e45"/>
+  <!-- Neck -->
+  <path d="M184 198 Q200 208 216 198 L218 228 Q200 236 182 228Z" fill="#0e2e45"/>
+  <!-- Shoulders and upper body -->
+  <path d="M30 500 C35 400 68 328 112 295 C138 279 166 271 200 270 C234 271 262 279 288 295 C332 328 365 400 370 500Z" fill="#0e2e45"/>
+</svg>
