@@ -1,15 +1,12 @@
-"use client";
-
 import Link from "next/link";
-import { useModalStore, type PartnerData } from "@/store/useModalStore";
+import Image from "next/image";
+import type { PartnerData } from "@/store/useModalStore";
 
 interface Props {
   partners: PartnerData[];
 }
 
 export function FirmTeamSection({ partners }: Props) {
-  const openModal = useModalStore((s) => s.openModal);
-
   return (
     <section
       id="leadership"
@@ -39,18 +36,12 @@ export function FirmTeamSection({ partners }: Props) {
         </Link>
       </header>
 
-      <div
-        className="grid gap-7"
-        style={{ gridTemplateColumns: "repeat(3,1fr)" }}
-      >
+      <div className="grid gap-7 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
         {partners.slice(0, 4).map((person) => (
-          <article
+          <Link
             key={person.id}
-            className="firm-team-card flex flex-col gap-3 cursor-pointer"
-            onClick={() => openModal(person)}
-            onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); openModal(person); } }}
-            role="button"
-            tabIndex={0}
+            href={`/firm/partners/${person.id}`}
+            className="firm-team-card flex flex-col gap-3 no-underline text-inherit"
             aria-label={`View ${person.name} biography`}
           >
             <div
@@ -83,7 +74,7 @@ export function FirmTeamSection({ partners }: Props) {
             >
               View bio →
             </span>
-          </article>
+          </Link>
         ))}
       </div>
     </section>

@@ -4,7 +4,6 @@ import "./globals.css";
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { Newsletter } from "@/components/Newsletter";
-import { PartnerModal } from "@/components/PartnerModal";
 import { RevealObserver } from "@/components/RevealObserver";
 
 const barlow = Barlow({
@@ -185,7 +184,6 @@ export default function RootLayout({
         <RevealObserver />
         <Newsletter />
         <Footer />
-        <PartnerModal />
       </body>
     </html>
   );

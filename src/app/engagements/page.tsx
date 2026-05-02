@@ -35,7 +35,7 @@ export default function EngagementsPage() {
       {/* Intro + filters */}
       <section
         className="max-w-[1440px] mx-auto flex justify-between items-baseline flex-wrap gap-12"
-        style={{ padding: "clamp(100px,12vw,160px) 48px 40px" }}
+        style={{ padding: "clamp(56px,7vw,100px) 48px 40px" }}
         aria-labelledby="engagements-page-heading"
       >
         <h1

@@ -1,4 +1,5 @@
 import type { MetadataRoute } from "next";
+import { PARTNER_DATA } from "@/lib/data";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://weareserge.com";
@@ -34,6 +35,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "yearly",
       priority: 0.6,
     },
+    ...PARTNER_DATA.map((p) => ({
+      url: `${baseUrl}/firm/partners/${p.id}`,
+      lastModified: new Date("2026-05-02"),
+      changeFrequency: "monthly" as const,
+      priority: 0.7,
+    })),
     {
       url: `${baseUrl}/privacy-policy`,
       lastModified: new Date("2026-01-01"),

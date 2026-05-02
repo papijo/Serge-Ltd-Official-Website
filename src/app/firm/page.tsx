@@ -37,7 +37,7 @@ export default function FirmPage() {
       {/* Hero */}
       <section
         className="max-w-[1440px] mx-auto flex flex-col"
-        style={{ padding: "clamp(100px,12vw,160px) clamp(24px,5vw,80px) 60px", gap: 52 }}
+        style={{ padding: "clamp(56px,7vw,100px) clamp(24px,5vw,80px) 60px", gap: 52 }}
         aria-labelledby="firm-hero-heading"
       >
         <div className="flex flex-col gap-6" style={{ maxWidth: 1100 }}>
@@ -58,7 +58,7 @@ export default function FirmPage() {
               letterSpacing: "-0.02em",
             }}
           >
-            Serge Ltd —
+            Serge —
             <br />
             built to build, advise,{" "}
             <em style={{ fontStyle: "italic", color: "#f9ac43", fontFamily: "var(--f-display)" }}>
@@ -68,8 +68,8 @@ export default function FirmPage() {
         </div>
         <div className="w-full overflow-hidden" style={{ aspectRatio: "16/7" }}>
           <Image
-            src="/images/about/about-team-hero.jpg"
-            alt="The Serge Ltd team"
+            src="https://images.unsplash.com/photo-1573164574511-73c773193279?w=1440&q=80&auto=format&fit=crop"
+            alt="The Serge team"
             width={1440}
             height={630}
             className="w-full h-full object-cover"
@@ -110,7 +110,7 @@ export default function FirmPage() {
             built for organisations that want to move.
           </h2>
           {[
-            "Serge Ltd was founded to close the gap between strategy and execution — bringing together consulting, technology, and communications under one roof. We work with corporations, governments, political organisations, and growing businesses across the world.",
+            "Serge was founded to close the gap between strategy and execution — bringing together consulting, technology, and communications under one roof. We work with corporations, governments, political organisations, and growing businesses across the world.",
             "Our work is genuinely multidisciplinary. A client working with us on digital transformation may also benefit from our communications counsel. A political organisation building its brand may also need our strategic advisory. We join these capabilities deliberately.",
             "What our clients share is not sector — it is ambition. We work with organisations across Europe, the Americas, Asia-Pacific, and Africa, including Nigeria, who want to build something real, lead with clarity, and communicate with purpose.",
           ].map((p) => (
@@ -122,8 +122,8 @@ export default function FirmPage() {
 
         <div style={{ gridColumn: 2, gridRow: 1 }}>
           <Image
-            src="/images/about/about-handshake.jpg"
-            alt="Partnership"
+            src="https://images.unsplash.com/photo-1758519289200-384c7ef2d163?w=600&q=80&auto=format&fit=crop"
+            alt="Advisory partnership"
             width={600}
             height={750}
             className="w-full object-cover"
@@ -134,8 +134,8 @@ export default function FirmPage() {
 
         <div style={{ gridColumn: 1, gridRow: 2 }}>
           <Image
-            src="/images/about/about-building.jpg"
-            alt="Headquarters"
+            src="https://images.unsplash.com/photo-1573496267526-08a69e46a409?w=600&q=80&auto=format&fit=crop"
+            alt="Serge team in consultation"
             width={600}
             height={750}
             className="w-full object-cover"
@@ -148,7 +148,7 @@ export default function FirmPage() {
           {[
             "We work in genuine partnership with our clients. Every engagement is handled by senior people who bring both depth and breadth to the work. No unnecessary layers.",
             "We are selective about the work we take on — not because of capacity, but because we only work where we can make a real difference. If a brief does not fit our practice, we say so.",
-            "Serge Ltd is a global firm with a local mindset. We work where our clients need us, and we bring the same standard wherever we go.",
+            "Serge is a global firm with a local mindset. We work where our clients need us, and we bring the same standard wherever we go.",
           ].map((p) => (
             <p key={p.slice(0, 20)} className="mb-4 last:mb-0 text-[#6b90a0]" style={{ fontSize: 16, lineHeight: 1.7, maxWidth: "54ch" }}>
               {p}
@@ -247,8 +247,7 @@ export default function FirmPage() {
       <section
         className="max-w-[1440px] mx-auto border-t border-b border-[rgba(175,208,222,0.11)]"
         style={{
-          margin: "0 clamp(24px,5vw,80px)",
-          padding: "52px clamp(20px,4vw,52px)",
+          padding: "52px clamp(24px,5vw,80px)",
           display: "grid",
           gridTemplateColumns: "repeat(4,1fr)",
           gap: 28,
@@ -335,13 +334,13 @@ export default function FirmPage() {
             className="m-0 font-sans uppercase text-[#6b90a0]"
             style={{ fontSize: 12, letterSpacing: "0.18em" }}
           >
-            [Title] — Serge Ltd
+            [Title] — Serge
           </p>
         </div>
         <div className="overflow-hidden" style={{ aspectRatio: "4/5" }}>
           <Image
-            src="/images/about/about-founder.jpg"
-            alt="Henrik Aaltonen, Managing Partner"
+            src="/images/partners/ehi-ero-omoighe.jpg"
+            alt="Ehi Ero-Omoighe III, Managing Partner"
             width={480}
             height={600}
             className="w-full h-full object-cover"
