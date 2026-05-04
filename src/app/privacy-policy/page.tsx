@@ -150,7 +150,7 @@ export default function PrivacyPolicyPage() {
           <section
             key={section.id}
             id={section.id}
-            className="legal-section-grid grid items-start"
+            className="legal-section-grid flex flex-col sm:grid items-start"
             style={{ gridTemplateColumns: "180px 1fr", gap: "clamp(24px,3vw,52px)" }}
           >
             <span

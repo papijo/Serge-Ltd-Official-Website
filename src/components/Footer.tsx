@@ -29,7 +29,7 @@ export function Footer() {
 
       {/* Main 3-column grid */}
       <div
-        className="footer-main-grid grid items-start"
+        className="footer-main-grid flex flex-col md:grid items-start"
         style={{
           gridTemplateColumns: "1.4fr 1fr 1fr",
           gap: "clamp(40px,5vw,60px)",

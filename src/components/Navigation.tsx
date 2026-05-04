@@ -65,7 +65,7 @@ export function Navigation() {
         }`}
         style={{ height: 76 }}
       >
-        <div className="grid h-full px-10 items-center" style={{ gridTemplateColumns: "1fr auto 1fr" }}>
+        <div className="grid h-full px-5 md:px-10 items-center" style={{ gridTemplateColumns: "1fr auto 1fr" }}>
           {/* Left: hamburger + logo */}
           <div className="flex items-center gap-10 justify-self-start">
             <button
@@ -205,10 +205,10 @@ export function Navigation() {
       {/* Mobile/hamburger overlay */}
       {menuOpen && (
         <div
-          className="fixed left-0 right-0 z-[96] border-t border-b border-[rgba(175,208,222,0.11)] shadow-[0_20px_40px_-24px_rgba(0,0,0,0.6)] mega-panel-enter overflow-hidden"
+          className="fixed left-0 right-0 z-[96] border-t border-b border-[rgba(175,208,222,0.11)] shadow-[0_20px_40px_-24px_rgba(0,0,0,0.6)] mega-panel-enter overflow-y-auto md:overflow-hidden"
           style={{
             top: 76,
-            height: "min(62vh, 780px)",
+            maxHeight: "85vh",
             background: "rgba(5,18,28,0.99)",
             backdropFilter: "blur(20px)",
           }}
@@ -217,16 +217,14 @@ export function Navigation() {
           aria-label="Site navigation"
         >
           <div
-            className="h-full grid"
+            className="flex flex-col md:grid md:h-[min(62vh,780px)]"
             style={{
-              gridTemplateColumns: activeCategory
-                ? "minmax(280px,1fr) minmax(0,1.4fr) 340px"
-                : "minmax(280px,1fr) minmax(0,1.4fr) 340px",
+              gridTemplateColumns: "minmax(220px,1fr) minmax(0,1.4fr) 320px",
             }}
           >
             {/* Categories column */}
             <div
-              className="overflow-y-auto py-10"
+              className="overflow-y-auto py-6 md:py-10"
               style={{ background: "rgba(5,18,28,0.8)" }}
             >
               {NAV_CONFIG.map((cat) => (
@@ -241,7 +239,7 @@ export function Navigation() {
                         closeAll();
                       }
                     }}
-                    className={`flex items-center justify-between px-10 py-4 no-underline text-[rgba(255,255,255,0.82)] border-l-[3px] transition-all duration-180 hover:bg-[rgba(255,255,255,0.03)] hover:text-[#f9ac43] ${
+                    className={`flex items-center justify-between px-5 md:px-10 py-3 md:py-4 no-underline text-[rgba(255,255,255,0.82)] border-l-[3px] transition-all duration-180 hover:bg-[rgba(255,255,255,0.03)] hover:text-[#f9ac43] ${
                       activeCategory === cat.label
                         ? "bg-[rgba(255,255,255,0.05)] text-[#ff7b2e] border-[#2da68a]"
                         : "border-transparent"
@@ -267,7 +265,7 @@ export function Navigation() {
             {/* Sub-links column */}
             <div className="overflow-y-auto" style={{ background: "#d8e8ef", color: "#0f2231" }}>
               {activeCatData && activeCatData.children ? (
-                <div className="flex flex-col p-10 gap-0">
+                <div className="flex flex-col p-5 md:p-10 gap-0">
                   <Link
                     href={activeCatData.path}
                     onClick={closeAll}
@@ -283,7 +281,7 @@ export function Navigation() {
                       <path d="M5 2L10 7L5 12" stroke="currentColor" strokeWidth="1.4" />
                     </svg>
                   </Link>
-                  <div className="grid gap-x-5 gap-y-1.5" style={{ gridTemplateColumns: "1fr 1fr" }}>
+                  <div className="grid gap-x-5 gap-y-1.5 grid-cols-1 sm:grid-cols-2">
                     {activeCatData.children.map((child) => (
                       <Link
                         key={child.label}
@@ -303,7 +301,7 @@ export function Navigation() {
 
             {/* Featured column */}
             <div
-              className="overflow-y-auto flex flex-col gap-4 p-10"
+              className="hidden md:flex overflow-y-auto flex-col gap-4 p-10"
               style={{ background: "#cddde6", color: "#111" }}
             >
               <span className="text-[10px] tracking-[0.28em] uppercase text-[rgba(0,0,0,0.5)]">Featured</span>

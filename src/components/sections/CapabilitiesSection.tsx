@@ -47,7 +47,7 @@ export function CapabilitiesSection() {
         {PRACTICE_AREAS.map((area) => (
           <article
             key={area.title}
-            className="practice-row grid items-center border-b"
+            className="practice-row flex flex-col md:grid items-start md:items-center border-b"
             style={{
               gridTemplateColumns: "64px minmax(0,1.4fr) minmax(360px,0.95fr)",
               gap: "clamp(20px,2vw,40px)",

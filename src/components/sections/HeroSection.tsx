@@ -1,16 +1,13 @@
 export function HeroSection() {
   return (
     <section
-      className="relative overflow-hidden"
+      className="relative overflow-hidden flex flex-col lg:grid items-start lg:items-center"
       aria-label="Hero"
       style={{
         marginTop: "-76px",
         minHeight: "100vh",
-        maxHeight: "100vh",
         padding: "clamp(104px,10vw,144px) clamp(24px,7vw,110px)",
-        display: "grid",
         gridTemplateColumns: "minmax(0,1fr) minmax(280px,0.86fr)",
-        alignItems: "center",
         gap: "clamp(26px,4vw,72px)",
         background: "linear-gradient(180deg, #0a5878 0%, #0a5473 52%, #0a4f6e 100%)",
       }}

@@ -35,7 +35,7 @@ export default function ServicesPage() {
       {/* Intro */}
       <section
         className="max-w-[1280px] mx-auto"
-        style={{ padding: "clamp(100px,12vw,160px) 48px 40px" }}
+        style={{ padding: "clamp(100px,12vw,160px) clamp(24px,4vw,48px) 40px" }}
         aria-labelledby="svc-heading"
       >
         <span
@@ -89,10 +89,9 @@ export default function ServicesPage() {
 
       {/* Index + blocks */}
       <section
-        className="max-w-[1280px] mx-auto"
+        className="max-w-[1280px] mx-auto flex flex-col lg:grid"
         style={{
-          padding: "40px 48px 80px",
-          display: "grid",
+          padding: "40px clamp(24px,4vw,48px) 80px",
           gridTemplateColumns: "260px 1fr",
           gap: 80,
           alignItems: "start",
@@ -183,8 +182,7 @@ export default function ServicesPage() {
               </div>
 
               <div
-                className="grid gap-11 border-t border-[rgba(175,208,222,0.11)] pt-6"
-                style={{ gridTemplateColumns: "1fr 1fr" }}
+                className="grid gap-11 grid-cols-1 sm:grid-cols-2 border-t border-[rgba(175,208,222,0.11)] pt-6"
               >
                 <div>
                   <span
@@ -254,7 +252,7 @@ export default function ServicesPage() {
       <section
         id="engagement-model"
         className="max-w-[1280px] mx-auto"
-        style={{ padding: "40px 48px 60px" }}
+        style={{ padding: "40px clamp(24px,4vw,48px) 60px" }}
         aria-labelledby="process-heading"
       >
         <h2
@@ -270,8 +268,7 @@ export default function ServicesPage() {
           Engagement model
         </h2>
         <ol
-          className="list-none p-0 mt-4 grid border-t border-b border-[rgba(175,208,222,0.11)]"
-          style={{ gridTemplateColumns: "repeat(5,minmax(0,1fr))" }}
+          className="list-none p-0 mt-4 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 border-t border-b border-[rgba(175,208,222,0.11)]"
         >
           {PROCESS_STEPS.map((step, i) => (
             <li
@@ -312,7 +309,7 @@ export default function ServicesPage() {
       {/* Footer CTA */}
       <section
         className="max-w-[1280px] mx-auto"
-        style={{ padding: "20px 48px 120px" }}
+        style={{ padding: "20px clamp(24px,4vw,48px) 120px" }}
       >
         <div
           className="w-full overflow-hidden border border-[rgba(175,208,222,0.11)] mb-6"

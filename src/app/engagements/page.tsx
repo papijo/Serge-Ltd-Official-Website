@@ -35,7 +35,7 @@ export default function EngagementsPage() {
       {/* Intro + filters */}
       <section
         className="max-w-[1440px] mx-auto flex justify-between items-baseline flex-wrap gap-12"
-        style={{ padding: "clamp(56px,7vw,100px) 48px 40px" }}
+        style={{ padding: "clamp(56px,7vw,100px) clamp(24px,4vw,48px) 40px" }}
         aria-labelledby="engagements-page-heading"
       >
         <h1
@@ -71,12 +71,12 @@ export default function EngagementsPage() {
       {/* Grid */}
       <section
         className="max-w-[1440px] mx-auto"
-        style={{ padding: "24px 48px 80px" }}
+        style={{ padding: "24px clamp(24px,4vw,48px) 80px" }}
         aria-label="Engagement portfolio"
       >
         <div
-          className="grid gap-x-7"
-          style={{ gridTemplateColumns: "1fr 1fr", gap: "44px 28px" }}
+          className="grid grid-cols-1 md:grid-cols-2"
+          style={{ gap: "44px 28px" }}
         >
           {/* Anchor targets */}
           <span id="cat-government" className="sr-only" />
@@ -88,7 +88,7 @@ export default function EngagementsPage() {
             <Link
               key={tile.title}
               href="/contact"
-              className={`work-tile block no-underline text-inherit ${tile.wide ? "col-span-2" : ""}`}
+              className={`work-tile block no-underline text-inherit ${tile.wide ? "md:col-span-2" : ""}`}
               aria-label={`Engagement: ${tile.title}`}
             >
               <div

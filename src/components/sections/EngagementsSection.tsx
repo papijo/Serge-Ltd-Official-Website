@@ -43,13 +43,11 @@ export function EngagementsSection() {
         {ENGAGEMENTS.map((eng) => (
           <article
             key={eng.title}
-            className="relative border overflow-hidden"
+            className="relative border overflow-hidden flex flex-col md:grid"
             style={{
-              minHeight: "clamp(480px,58vh,720px)",
               background: "linear-gradient(140deg,rgba(10,50,70,0.94),rgba(6,34,50,0.92))",
               borderColor: "rgba(255,255,255,0.07)",
               padding: "clamp(24px,3.2vw,48px)",
-              display: "grid",
               gridTemplateColumns: "minmax(0,1.08fr) minmax(0,0.92fr)",
               gap: "clamp(22px,3vw,46px)",
             }}

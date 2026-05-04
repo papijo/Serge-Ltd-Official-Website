@@ -82,10 +82,9 @@ export default function FirmPage() {
       {/* Our Approach */}
       <section
         id="approach"
-        className="max-w-[1440px] mx-auto"
+        className="max-w-[1440px] mx-auto flex flex-col lg:grid"
         style={{
           padding: "72px clamp(24px,5vw,80px)",
-          display: "grid",
           gridTemplateColumns: "1fr 1fr",
           gridAutoRows: "auto",
           gap: "56px 48px",
@@ -183,9 +182,8 @@ export default function FirmPage() {
           Our foundations.
         </h2>
         <div
-          className="grid gap-px"
+          className="grid gap-px grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
           style={{
-            gridTemplateColumns: "repeat(3,1fr)",
             background: "rgba(175,208,222,0.11)",
             border: "1px solid rgba(175,208,222,0.11)",
           }}
@@ -245,11 +243,9 @@ export default function FirmPage() {
 
       {/* Stats */}
       <section
-        className="max-w-[1440px] mx-auto border-t border-b border-[rgba(175,208,222,0.11)]"
+        className="max-w-[1440px] mx-auto border-t border-b border-[rgba(175,208,222,0.11)] grid grid-cols-2 md:grid-cols-4"
         style={{
           padding: "52px clamp(24px,5vw,80px)",
-          display: "grid",
-          gridTemplateColumns: "repeat(4,1fr)",
           gap: 28,
         }}
         aria-label="Firm statistics"
@@ -291,10 +287,9 @@ export default function FirmPage() {
 
       {/* Founder quote */}
       <section
-        className="max-w-[1440px] mx-auto"
+        className="max-w-[1440px] mx-auto flex flex-col lg:grid"
         style={{
           padding: "88px clamp(24px,5vw,80px)",
-          display: "grid",
           gridTemplateColumns: "1.2fr 0.9fr",
           gap: 72,
           alignItems: "center",
@@ -442,8 +437,7 @@ export default function FirmPage() {
           </span>
         </header>
         <div
-          className="grid border-t border-b border-[rgba(175,208,222,0.11)]"
-          style={{ gridTemplateColumns: "repeat(5,1fr)" }}
+          className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 border-t border-b border-[rgba(175,208,222,0.11)]"
         >
           {["AERIS GROUP", "NOVA ENERGY", "CIVIC WORKS", "ARC BANK", "METROPOLIS AUTHORITY"].map((name, i) => (
             <div
@@ -454,7 +448,6 @@ export default function FirmPage() {
                 fontSize: "clamp(11px,1vw,14px)",
                 letterSpacing: "0.16em",
                 color: "#e2ecf0",
-                borderRight: i < 4 ? "1px solid rgba(175,208,222,0.11)" : "none",
               }}
             >
               {name}

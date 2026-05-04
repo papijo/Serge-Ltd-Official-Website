@@ -67,7 +67,7 @@ export function ContactForm() {
       </p>
 
       <form onSubmit={handleSubmit} className="contact-form flex flex-col gap-4">
-        <div className="grid gap-4" style={{ gridTemplateColumns: "1fr 1fr" }}>
+        <div className="grid gap-4 grid-cols-1 sm:grid-cols-2">
           <Input
             type="text"
             name="name"

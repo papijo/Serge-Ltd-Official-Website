@@ -31,10 +31,11 @@ export function EditorialSection() {
       />
 
       <div
-        className="relative z-10 max-w-[1440px] mx-auto grid gap-x-[clamp(48px,7vw,120px)] items-center"
+        className="relative z-10 max-w-[1440px] mx-auto flex flex-col lg:grid gap-x-[clamp(48px,7vw,120px)] items-start lg:items-center"
         style={{
-          padding: "clamp(72px,9vw,140px) clamp(32px,6vw,110px)",
+          padding: "clamp(72px,9vw,140px) clamp(24px,6vw,110px)",
           gridTemplateColumns: "minmax(0,1fr) minmax(0,1fr)",
+          gap: "clamp(40px,7vw,0px)",
         }}
       >
         {/* Left */}
@@ -75,7 +76,7 @@ export function EditorialSection() {
 
         {/* Right */}
         <div
-          className="flex flex-col gap-4 border-l"
+          className="flex flex-col gap-4 border-t lg:border-t-0 lg:border-l pt-8 lg:pt-0"
           style={{
             borderColor: "rgba(175,208,222,0.11)",
             paddingLeft: "clamp(32px,4vw,72px)",

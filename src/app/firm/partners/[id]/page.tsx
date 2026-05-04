@@ -80,11 +80,11 @@ export default async function PartnerPage({
         </Link>
 
         <div
-          className="grid gap-12 mb-16"
+          className="flex flex-col md:grid gap-12 mb-16"
           style={{ gridTemplateColumns: "280px 1fr", alignItems: "start" }}
         >
           <div
-            className="overflow-hidden border border-[rgba(175,208,222,0.11)]"
+            className="overflow-hidden border border-[rgba(175,208,222,0.11)] w-full max-w-[280px]"
             style={{ aspectRatio: "4/5" }}
           >
             <Image
